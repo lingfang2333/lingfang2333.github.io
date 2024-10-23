@@ -2,23 +2,19 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | Gridea</title>
+<title>debian安装node | Gridea</title>
 <link rel="shortcut icon" href="https://lingfang2333.github.io/favicon.ico?v=1729673178180">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://lingfang2333.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="关于 | Gridea - Atom Feed" href="https://lingfang2333.github.io/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="debian安装node | Gridea - Atom Feed" href="https://lingfang2333.github.io/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="
-欢迎来到我的小站呀，很高兴遇见你！🤝
-
-🏠 关于本站
-👨‍💻 博主是谁
-⛹ 兴趣爱好
-📬 联系我呀
-..." />
+    <meta name="description" content="##确认系统架构：
+执行uname -m命令来确认你的系统架构。ARMbian通常支持多种ARM架构，包括ARMv7和ARMv8（aarch64）。
+##下载Node.js：
+根据你的系统架构，从Node.js官方网站下载适合的版本。对于A..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
@@ -81,46 +77,61 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              关于
+              debian安装node
             </h2>
             <div class="post-info">
               <span>
-                2019-01-25
+                2024-10-23
               </span>
               <span>
-                1 min read
+                2 min read
               </span>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content" v-pre>
-                <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<h2 id="联系我呀">📬 联系我呀</h2>
+                <p>##确认系统架构：<br>
+执行uname -m命令来确认你的系统架构。ARMbian通常支持多种ARM架构，包括ARMv7和ARMv8（aarch64）。</p>
+<p>##下载Node.js：<br>
+根据你的系统架构，从Node.js官方网站下载适合的版本。对于ARMv7，你可以下载ARMv7l版的压缩包；对于ARMv8（aarch64），下载ARM64版的压缩包。例如，使用以下命令下载：</p>
+<p>wget https://nodejs.org/dist/v18.16.0/node-v18.16.0-linux-arm64.tar.xz<br>
+请替换为最新的版本号。</p>
+<p>##解压Node.js：<br>
+使用tar命令解压下载的Node.js压缩包：</p>
+<p>tar -xvf node-v18.16.0-linux-arm64.tar.xz<br>
+##移动Node.js到系统目录：<br>
+将解压后的Node.js目录移动到系统目录，例如/usr/local：</p>
+<p>sudo mv node-v18.16.0-linux-arm64 /usr/local/nodejs<br>
+##建立软链接：<br>
+为了全局使用node和npm命令，需要在/usr/local/bin下建立软链接：</p>
+<p>sudo ln -s /usr/local/nodejs/bin/node /usr/local/bin/node<br>
+sudo ln -s /usr/local/nodejs/bin/npm /usr/local/bin/npm<br>
+##验证安装：<br>
+通过执行node -v和npm -v命令来验证Node.js和npm是否正确安装。如果安装成功，这些命令将输出各自的版本号。</p>
+<p>#atp命令安装<br>
+这个方法是上面那个方法没用的情况下使用，直接在命令行输入<br>
+apt-get install -y nodejs</p>
+<p>npm安装也一样<br>
+apt install npm</p>
 
               </div>
               <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">🏠 关于本站</a></li>
-<li><a href="#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81">👨‍💻 博主是谁</a></li>
-<li><a href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD">⛹ 兴趣爱好</a></li>
-<li><a href="#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80">📬 联系我呀</a></li>
-</ul>
-</li>
-</ul>
-
+                
               </div>
             </div>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://lingfang2333.github.io/post/hello-gridea/">
+              <h3 class="post-title">
+                Hello Gridea
+              </h3>
+            </a>
+          </div>
         
 
         
